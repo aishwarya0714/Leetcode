@@ -5,6 +5,7 @@ public class FindMaxNegPos {
     int arr[] = { -5, -3,1 ,2,3};
     System.out.println(findMax(arr));
    } 
+   // using binary search
    static int findMax(int[] arr){
     int s=0;
     int e=arr.length-1;
@@ -32,5 +33,21 @@ public class FindMaxNegPos {
        }
     }
     return -1;
+
+      // using simple approach linear search
+    //   for(int i=0;i<nums.length;i++){
+    //     if(nums[i]<0){
+    //         n++;
+    //     }
+    //     else if(nums[i]>0){
+    //         p++;
+    //     }
+    // }
+    // if(n>p){
+    //     return n;
+    // }
+    // else{
+    //     return p;
+    // }
    }
 }
