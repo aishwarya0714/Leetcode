@@ -1,0 +1,29 @@
+https://leetcode.com/problems/sorting-the-sentence/ 
+1859. Sorting the Sentence
+``` 
+class Solution {
+    public String sortSentence(String s) {
+        String[] words=s.split("\\s");
+        StringBuilder str = new StringBuilder();
+        int i=1;
+        while(i<=9){
+        for(String w:words){
+            if(w.contains(String.valueOf(i))){
+                str.append(w.substring(0,w.length()-1));
+                str.append(" ");   
+            }
+            // else{
+            //     continue;
+            // }  
+        }
+        i++;
+        }
+        return str.toString().trim();
+    }
+}
+```
+
+### note:
+1. String[] words=s.split("\\s"); - split will generate array of words, use "\\s" to split with white space.
+2. StringBuilder str = new StringBuilder(); - StringBuilder is mutable
+3. str.toString().trim();- to return StringBuilder convert it to string and to remove whicte space form start and end trim() is used.
